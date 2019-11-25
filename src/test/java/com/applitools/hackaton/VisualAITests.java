@@ -29,6 +29,7 @@ public class VisualAITests extends BaseTest {
     public void setup() {
         eyes = new Eyes();
         eyes.setApiKey(APLITOOLS_API_KEY);
+        eyes.setBatch(new BatchInfo("Applitools Hackaton v2"));
     }
 
     @AfterTest
@@ -50,7 +51,7 @@ public class VisualAITests extends BaseTest {
         Assert.assertTrue(result.isPassed(), "Verify if screenshots match");
     }
 
-    @Test(dataProvider = "DataDrivenTest", dataProviderClass = VisualAITests.class)
+    @Test(dataProvider = "DataDrivenTest", dataProviderClass = BaseTest.class)
     public void dataDrivenTest(String scenarioName, String username, String password, String expectedResult)
             throws PageNotFoundException {
 
@@ -134,12 +135,6 @@ public class VisualAITests extends BaseTest {
         TestResults result = eyes.close();
         Assert.assertTrue(result.isPassed(), "Verify if screenshots match");
 
-    }
-
-    @DataProvider(name = "DataDrivenTest")
-    public static Object[][] credentials() {
-        eyes.setBatch(new BatchInfo("Data Driven Test"));
-        return BaseTest.credentials();
     }
 
 }
