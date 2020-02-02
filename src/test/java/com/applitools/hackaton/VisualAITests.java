@@ -21,7 +21,7 @@ public class VisualAITests extends BaseTest {
     private static final String username = "test_user";
     private static final String password = "test123#";
     private static final String SHOW_ADS_FLAG = "?showAd=true";
-    private static final String APLITOOLS_API_KEY = "Q5x5tJK25vuZJ4KtEsJMAdN2D1071gqChu8H9OuqIrzQ4110";
+    private static final String APLITOOLS_API_KEY = "API_KEY_HERE";
      private static final String BASE_URL = "https://demo.applitools.com/hackathon.html";
 //    private static final String BASE_URL = "https://demo.applitools.com/hackathonV2.html";
 
